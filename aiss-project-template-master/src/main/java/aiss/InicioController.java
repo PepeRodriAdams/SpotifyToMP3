@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class HelloWorldServlet extends HttpServlet {
+public class InicioController extends HttpServlet {
 	
-	private static final Logger log = Logger.getLogger(HelloWorldServlet.class.getName());
+	private static final Logger log = Logger.getLogger(InicioController.class.getName());
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
