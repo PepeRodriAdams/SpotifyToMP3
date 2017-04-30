@@ -17,9 +17,18 @@
       	</tr>
     </table>
     <table>
-    <tr>Llamadas a APIs:</tr>
+    <tr>Llamadas a APIs:</tr><br><br>
     
-	<td><a href="InicioController">Enlace al servlet</a></td>    
+	<tr><a href="InicioController">YoutubeInMP3</a></tr>  
+	
+	<tr> <h2>Llamada a Spotify (busqueda de álbumes por artista):</h2>
+    	<div id="searchDiv">
+			<form id="searchForm" action="SearchController" method="post">
+				<input type="text" name="searchQuery" required/> 
+				<input type="submit" name="searchBtn" title="búsqueda" value="búsqueda">
+			</form>
+		</div>
+	</tr>    
     </table>
   </body>
 </html>

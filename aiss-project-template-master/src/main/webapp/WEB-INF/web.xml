@@ -5,17 +5,32 @@
 	version="2.5">
 	<servlet>
 		<servlet-name>InicioController</servlet-name>
-		<servlet-class>aiss.InicioController</servlet-class>
+		<servlet-class>aiss.controller.InicioController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>InicioController</servlet-name>
 		<url-pattern>/InicioController</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+    	<servlet-name>SearchController</servlet-name>
+  		<servlet-class>aiss.controller.SearchController</servlet-class>
+ 	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>SearchController</servlet-name>
+    	<url-pattern>/SearchController</url-pattern>
+  	</servlet-mapping>
+ 
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
-	
+	 
+	 <!-- Error page -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
 	<!--  OAUTH SERVLETS 
   
   	For each OAuth 2.0 service, you need to create two servlets: one for the initiation 
