@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.google.appengine.repackaged.com.google.gson.Gson;
@@ -20,30 +21,29 @@ public class YoutubeInMP3Resource {
 
 	public String getDownload(String idVideo) throws UnsupportedEncodingException{ 
 		 
-		String enlace = URLEncoder.encode(idVideo, "UTF-8");
+	//	String enlace = URLEncoder.encode(idVideo, "UTF-8");
 		 try
 	      {
-	         URL url = new URL("http://www.youtubeinmp3.com/fetch/?format=JSON&video=https://www.youtube.com/watch?v="+ enlace);
+	         URL url = new URL("http://www.youtubeinmp3.com/fetch/?format=JSON&video=https://www.youtube.com/watch?v="+ idVideo);
 	         URLConnection urlConnection = url.openConnection();
 	         HttpURLConnection connection = null;
 	         if(urlConnection instanceof HttpURLConnection)
 	         {
 	            connection = (HttpURLConnection) urlConnection;
 	         }
-	         else
-	         {
+	         else{
 	         }
 	         BufferedReader in = new BufferedReader(
 	         new InputStreamReader(connection.getInputStream()));
 	         String urlString = "";
 	         String current;
-	         while((current = in.readLine()) != null)
-	         {
+	         while((current = in.readLine()) != null){
 	            urlString += current;
 	            Gson gsonObj = new Gson();
 	            YoutubeInMP3 sol = gsonObj.fromJson(urlString, YoutubeInMP3.class);
+	    		log.log(Level.FINE,"Búsqueda del enlace ok. Enlace de descarga: "+sol.getLink());
 	            return sol.getLink();
-	            
+
 	         }
 
 	    }catch(IOException e)
