@@ -19,5 +19,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/josev/Downloads/gson-2.8.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/josev/Downloads/EasyTool.jar"/>
 	<classpathentry kind="output" path="target/project_name-0.0.1-SNAPSHOT/WEB-INF/classes"/>
 </classpath>

@@ -30,7 +30,7 @@ public class InicioController extends HttpServlet {
 		// Youtube In MP3
 		log.log(Level.FINE, "Processing YoutubeInMP3 GET request");
 		YoutubeInMP3Resource inMP3 = new YoutubeInMP3Resource();
-		YoutubeInMP3 inMP3res = inMP3.getDownload(urlVideo);
+		String inMP3res = inMP3.getDownload(urlVideo);
 		 
 		if(inMP3res !=null){
 			request.setAttribute("inMP3res", inMP3res);

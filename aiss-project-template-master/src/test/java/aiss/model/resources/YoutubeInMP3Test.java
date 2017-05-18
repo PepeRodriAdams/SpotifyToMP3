@@ -14,14 +14,13 @@ public class YoutubeInMP3Test {
 	@Test
 	public void getDownloadTest() throws UnsupportedEncodingException {
 	
-		String urlVideo = "https://www.youtube.com/watch?v=Gx6xnVQuFzw"; //video de kendrik lamar - humble
+		String idVideo = "Gx6xnVQuFzw"; //video de kendrik lamar - humble
 		YoutubeInMP3Resource inMP3 = new YoutubeInMP3Resource();
-		YoutubeInMP3 inMP3res = inMP3.getDownload(urlVideo);
+		String inMP3res = inMP3.getDownload(idVideo);
 		
 		assertNotNull("The search returned null", inMP3res);
-		assertNotNull("The search returned null", inMP3res.getLink());
 
-		System.out.println("The search for KendrikLamar HUMBLE returned this link: " + inMP3res.getLink().toString());
+		System.out.println("The search for KendrikLamar HUMBLE returned this link: " + inMP3res);
 
 	}
 }
