@@ -14,20 +14,8 @@
 <fieldset id="youtubeInMP3">
 <legend>YoutubeInMP3 link for Humble - Kendrik Lamar </legend>
 
-	<td><a href="${inMP3res.link}"/> }">Enlace de descarga</a></td>    
+	<td><a href="${inMP3res}"/> }">Enlace de descarga</a></td>    
 
 </fieldset>
-
-  
-<fieldset id="youtubeInMP32">
-<legend>YoutubeInMP3 link for Humble - Kendrik Lamar (2)</legend>
-
-<c:forEach items="${requestScope.inMP3res}" var="inMP3res">
-	<c:out value="${inMP3res.link}"/><br/>
-</c:forEach>
-</fieldset>
-
-
-
 </body>
 </html>
