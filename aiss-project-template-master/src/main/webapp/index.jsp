@@ -1,6 +1,16 @@
 <%@include file="includes/header.jsp"%>
 
-  
+       <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.jsp">Inicio</a>
+          <div id="buscar2"></div>
+          <div class="android-drawer-separator"></div>
+          <a class="mdl-navigation__link" href="api.html">Nuestra API REST</a>
+          <div class="android-drawer-separator"></div>
+         </nav>
+      </div>
     <h1>Proyecto 2017 - Spotify To Mp3</h1>
 	
     <h2>Alumnos que forman parte del grupo:</h2>
