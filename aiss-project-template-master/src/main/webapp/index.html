@@ -1,20 +1,32 @@
 
 <!DOCTYPE html> <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
     <title>Spotify To Mp3</title>
   </head>
 
-  <body>
+  <body>		
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Inicio</a>
+          <div id="buscar2"></div>
+          <div class="android-drawer-separator"></div>
+          <a class="mdl-navigation__link" href="api.html">Nuestra API REST</a>
+          <div class="android-drawer-separator"></div>
+         </nav>
+      </div>
     <h1>Proyecto 2017 - Spotify To Mp3</h1>
 	
     <h2>Alumnos que forman parte del grupo:</h2>
     <table>
     	<tr>    
-    	<p>Tom√°s Jim√©nez Ponce</p>
-    	<p>Jos√© Rodr√≠guez Adame</p>
-    	<p>Jos√© Mar√≠a Villal√≥n Rivero</p>
+    	<p>Tom·s JimÈnez Ponce</p>
+    	<p>JosÈ RodrÌguez Adame</p>
+    	<p>JosÈ MarÌa VillalÛn Rivero</p>
       	</tr>
     </table>
     <table>
@@ -22,11 +34,11 @@
     
 	<tr><a href="InicioController">YoutubeInMP3</a></tr>  
 	
-	<tr> <h2>Llamada a Spotify (busqueda de √°lbumes por artista):</h2>
+	<tr> <h2>Llamada a Spotify (busqueda de ·lbumes por artista):</h2>
     	<div id="searchDiv">
 			<form id="searchForm" action="SearchController" method="post">
 				<input type="text" name="searchQuery" required/> 
-				<input type="submit" name="searchBtn" title="b√∫squeda" value="b√∫squeda">
+				<input type="submit" name="searchBtn" title="b˙squeda" value="b˙squeda">
 			</form>
 		</div>
 	</tr>    
