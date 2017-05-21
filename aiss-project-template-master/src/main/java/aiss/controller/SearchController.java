@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import aiss.model.spotify.AlbumSearch;
+import aiss.model.spotify.TrackSearch;
 import aiss.model.resources.SpotifyResource;
 
 
@@ -35,22 +36,30 @@ public class SearchController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 		
-//		String query = request.getParameter("searchQuery");
-//		RequestDispatcher rd = null;
-//		
-//		// Search for albums in Spotify
-//		log.log(Level.FINE, "Searching for Spotify results of " + query);
-//		SpotifyResource spotify = new SpotifyResource();
-//		AlbumSearch spotifyResults = spotify.getAlbums(query);
-//		
-//		if (spotifyResults!=null){
-//			rd = request.getRequestDispatcher("/success2.jsp");
-//			request.setAttribute("albums", spotifyResults.getAlbums().getItems());
-//		} else {
-//			log.log(Level.SEVERE, "Spotify object: " + spotifyResults);
-//			rd = request.getRequestDispatcher("/error.jsp");
-//		}
-//		rd.forward(request, response);
+		String query = request.getParameter("searchQuery");
+		String accessToken=(String) request.getSession().getAttribute("Spotify-token");	
+		RequestDispatcher rd = null;
+		
+		if(accessToken!=null && !"".equals(accessToken)){
+
+		// Search for tracks in Spotify
+		log.log(Level.FINE, "Searching for Spotify results of " + query);
+		SpotifyResource spotify = new SpotifyResource(accessToken);
+		TrackSearch spotifyResults = spotify.getTrackSearch(query);
+		
+		if (spotifyResults!=null){
+			rd = request.getRequestDispatcher("/success2.jsp");
+			request.setAttribute("tracks", spotifyResults.getTracks().getItems());
+		} else {
+			log.log(Level.SEVERE, "Spotify object: " + spotifyResults);
+			rd = request.getRequestDispatcher("/error.jsp");
+		}
+		
+		}else{
+			log.info("Intentando acceder a Spotify sin un token de acceso, redirigiendo al OAuth servlet");
+			rd = request.getRequestDispatcher("/AuthController/Spotify");	
+		}
+		rd.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

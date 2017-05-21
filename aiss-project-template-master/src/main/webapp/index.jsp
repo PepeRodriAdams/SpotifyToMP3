@@ -23,14 +23,12 @@
     	<div id="searchDiv">
 			<form id="searchForm" action="SearchController" method="post">
 				<input type="text" name="searchQuery" required/> 
-				<input type="submit" name="searchBtn" title="búsqueda" value="búsqueda">
+				<input type="submit" name="searchBtn" title="busqueda" value="b�squeda">
 			</form>
 		</div>
 	</tr>    
   	<tr><a href="LoginController">Login en Spotify</a></tr> 
-	    <table>
-    	<tr><th>Spotify token:<th><td><c:out value='${sessionScope["Spotify-token"]}' /> </td> </tr>
-    	</table>
+
  	</table>
 
     

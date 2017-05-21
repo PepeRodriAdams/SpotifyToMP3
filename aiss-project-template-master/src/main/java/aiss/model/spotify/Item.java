@@ -5,32 +5,84 @@ import java.util.List;
 
 public class Item {
 
-    private Boolean collaborative;
-    private ExternalUrls externalUrls;
+    private Album album;
+    private List<Artist_> artists = null;
+    private List<String> availableMarkets = null;
+    private Integer discNumber;
+    private Integer durationMs;
+    private Boolean explicit;
+    private ExternalIds externalIds;
+    private ExternalUrls___ externalUrls;
     private String href;
     private String id;
-    private List<Object> images = null;
     private String name;
-    private Owner owner;
-    private Boolean _public;
-    private String snapshotId;
-    private Tracks tracks;
+    private Integer popularity;
+    private String previewUrl;
+    private Integer trackNumber;
     private String type;
     private String uri;
 
-    public Boolean getCollaborative() {
-        return collaborative;
+    public Album getAlbum() {
+        return album;
     }
 
-    public void setCollaborative(Boolean collaborative) {
-        this.collaborative = collaborative;
+    public void setAlbum(Album album) {
+        this.album = album;
     }
 
-    public ExternalUrls getExternalUrls() {
+    public List<Artist_> getArtists() {
+        return artists;
+    }
+
+    public void setArtists(List<Artist_> artists) {
+        this.artists = artists;
+    }
+
+    public List<String> getAvailableMarkets() {
+        return availableMarkets;
+    }
+
+    public void setAvailableMarkets(List<String> availableMarkets) {
+        this.availableMarkets = availableMarkets;
+    }
+
+    public Integer getDiscNumber() {
+        return discNumber;
+    }
+
+    public void setDiscNumber(Integer discNumber) {
+        this.discNumber = discNumber;
+    }
+
+    public Integer getDurationMs() {
+        return durationMs;
+    }
+
+    public void setDurationMs(Integer durationMs) {
+        this.durationMs = durationMs;
+    }
+
+    public Boolean getExplicit() {
+        return explicit;
+    }
+
+    public void setExplicit(Boolean explicit) {
+        this.explicit = explicit;
+    }
+
+    public ExternalIds getExternalIds() {
+        return externalIds;
+    }
+
+    public void setExternalIds(ExternalIds externalIds) {
+        this.externalIds = externalIds;
+    }
+
+    public ExternalUrls___ getExternalUrls() {
         return externalUrls;
     }
 
-    public void setExternalUrls(ExternalUrls externalUrls) {
+    public void setExternalUrls(ExternalUrls___ externalUrls) {
         this.externalUrls = externalUrls;
     }
 
@@ -50,14 +102,6 @@ public class Item {
         this.id = id;
     }
 
-    public List<Object> getImages() {
-        return images;
-    }
-
-    public void setImages(List<Object> images) {
-        this.images = images;
-    }
-
     public String getName() {
         return name;
     }
@@ -66,36 +110,28 @@ public class Item {
         this.name = name;
     }
 
-    public Owner getOwner() {
-        return owner;
+    public Integer getPopularity() {
+        return popularity;
     }
 
-    public void setOwner(Owner owner) {
-        this.owner = owner;
+    public void setPopularity(Integer popularity) {
+        this.popularity = popularity;
     }
 
-    public Boolean getPublic() {
-        return _public;
+    public String getPreviewUrl() {
+        return previewUrl;
     }
 
-    public void setPublic(Boolean _public) {
-        this._public = _public;
+    public void setPreviewUrl(String previewUrl) {
+        this.previewUrl = previewUrl;
     }
 
-    public String getSnapshotId() {
-        return snapshotId;
+    public Integer getTrackNumber() {
+        return trackNumber;
     }
 
-    public void setSnapshotId(String snapshotId) {
-        this.snapshotId = snapshotId;
-    }
-
-    public Tracks getTracks() {
-        return tracks;
-    }
-
-    public void setTracks(Tracks tracks) {
-        this.tracks = tracks;
+    public void setTrackNumber(Integer trackNumber) {
+        this.trackNumber = trackNumber;
     }
 
     public String getType() {
