@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<servlet>
-		<servlet-name>InicioController</servlet-name>
-		<servlet-class>aiss.controller.InicioController</servlet-class>
+		<servlet-name>DescargaController</servlet-name>
+		<servlet-class>aiss.controller.DescargaController</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>InicioController</servlet-name>
-		<url-pattern>/InicioController</url-pattern>
+		<servlet-name>DescargaController</servlet-name>
+		<url-pattern>/DescargaController</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -49,10 +49,19 @@
   			initiation servlet could be	/AuthController/X, and the url-pattern of the callback
   			 servlet must be /oauth2callback/X.
   -->
+  
+  <servlet>
+    	<servlet-name>LoginSpotifyServlet</servlet-name>
+  		<servlet-class>aiss.controller.LoginController</servlet-class>
+ 	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>LoginSpotifyServlet</servlet-name>
+    	<url-pattern>/LoginController</url-pattern>
+  	</servlet-mapping>
+  
   <!--    Spotify example -->
   
-  <!--  
-  <servlet>
+ <servlet>
     <description></description>
     <display-name>SpotifyAuthController</display-name>
     <servlet-name>SpotifyAuthController</servlet-name>
@@ -77,14 +86,12 @@
     </init-param>
     <init-param>
     	<param-name>onSuccess</param-name>
-    	<param-value>close</param-value>
+    	<param-value>redirect:/LoginController</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>SpotifyOAuth2Callback</servlet-name>
     <url-pattern>/oauth2callback/Spotify</url-pattern>
   </servlet-mapping>
-  
-  -->
 
 </web-app>

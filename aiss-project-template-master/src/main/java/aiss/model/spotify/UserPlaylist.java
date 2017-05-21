@@ -3,12 +3,12 @@ package aiss.model.spotify;
 
 import java.util.List;
 
-public class Albums {
+public class UserPlaylist {
 
     private String href;
     private List<Item> items = null;
     private Integer limit;
-    private String next;
+    private Object next;
     private Integer offset;
     private Object previous;
     private Integer total;
@@ -37,11 +37,11 @@ public class Albums {
         this.limit = limit;
     }
 
-    public String getNext() {
+    public Object getNext() {
         return next;
     }
 
-    public void setNext(String next) {
+    public void setNext(Object next) {
         this.next = next;
     }
 

@@ -12,12 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import aiss.model.YoutubeInMp3.YoutubeInMP3;
 import aiss.model.resources.YoutubeInMP3Resource;
+import aiss.model.resources.YoutubeResource;
 
-public class InicioController extends HttpServlet {
+public class DescargaController extends HttpServlet {
 	
-	private static final Logger log = Logger.getLogger(InicioController.class.getName());
+	private static final Logger log = Logger.getLogger(DescargaController.class.getName());
 	
-    public InicioController() {
+    public DescargaController() {
         super();
     }
 	
@@ -25,12 +26,16 @@ public class InicioController extends HttpServlet {
 		
 		// Sample log
 		RequestDispatcher rd = null;
-		String urlVideo = "https://www.youtube.com/watch?v=Gx6xnVQuFzw"; //video de kendrik lamar humble
+		String query = "Gx6xnVQuFzw"; 
 		
+		//Youtube
+		log.log(Level.FINE, "Processing Youtube GET request");
+		YoutubeResource youtubeSearch = new YoutubeResource();
+		String idVideo = youtubeSearch.getID(query);
 		// Youtube In MP3
 		log.log(Level.FINE, "Processing YoutubeInMP3 GET request");
 		YoutubeInMP3Resource inMP3 = new YoutubeInMP3Resource();
-		String inMP3res = inMP3.getDownload(urlVideo);
+		String inMP3res = inMP3.getDownload(idVideo);
 		 
 		if(inMP3res !=null){
 			request.setAttribute("inMP3res", inMP3res);

@@ -7,6 +7,6 @@
 <title>Error page</title>
 </head>
 <body>
-<h3>Something failed, please <a href="index.html">try again </a>.</h3>
+<h3>Something failed, please <a href="index.jsp">try again </a>.</h3>
 </body>
 </html>

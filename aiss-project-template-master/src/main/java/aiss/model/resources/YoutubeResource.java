@@ -18,7 +18,7 @@ public class YoutubeResource {
 	public String getID(String query) throws UnsupportedEncodingException{ 
 
 		String busqueda = URLEncoder.encode(query, "UTF-8");
-		ClientResource cr = new ClientResource("https://www.googleapis.com/youtube/v3/search?key="+apiKey+"&part=id&q="+busqueda);
+		ClientResource cr = new ClientResource("https://www.googleapis.com/youtube/v3/search?key="+apiKey+"&part=id&q="+busqueda+"%20lyrics");
 		YoutubeSearch res = cr.get(YoutubeSearch.class);
 		log.log(Level.FINE,"Búsqueda de id del vídeo "+ query +" realizada correctamente.");
 		return res.getItems().get(0).getId().getVideoId();

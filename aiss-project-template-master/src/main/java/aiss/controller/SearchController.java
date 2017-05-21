@@ -35,22 +35,22 @@ public class SearchController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 		
-		String query = request.getParameter("searchQuery");
-		RequestDispatcher rd = null;
-		
-		// Search for albums in Spotify
-		log.log(Level.FINE, "Searching for Spotify albums of " + query);
-		SpotifyResource spotify = new SpotifyResource();
-		AlbumSearch spotifyResults = spotify.getAlbums(query);
-		
-		if (spotifyResults!=null){
-			rd = request.getRequestDispatcher("/success2.jsp");
-			request.setAttribute("albums", spotifyResults.getAlbums().getItems());
-		} else {
-			log.log(Level.SEVERE, "Spotify object: " + spotifyResults);
-			rd = request.getRequestDispatcher("/error.jsp");
-		}
-		rd.forward(request, response);
+//		String query = request.getParameter("searchQuery");
+//		RequestDispatcher rd = null;
+//		
+//		// Search for albums in Spotify
+//		log.log(Level.FINE, "Searching for Spotify results of " + query);
+//		SpotifyResource spotify = new SpotifyResource();
+//		AlbumSearch spotifyResults = spotify.getAlbums(query);
+//		
+//		if (spotifyResults!=null){
+//			rd = request.getRequestDispatcher("/success2.jsp");
+//			request.setAttribute("albums", spotifyResults.getAlbums().getItems());
+//		} else {
+//			log.log(Level.SEVERE, "Spotify object: " + spotifyResults);
+//			rd = request.getRequestDispatcher("/error.jsp");
+//		}
+//		rd.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
