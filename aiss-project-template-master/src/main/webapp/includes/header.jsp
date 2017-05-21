@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="images/logo.jpg" rel="stylesheet" type="text/css" href="css/style.css">
 
 <title>SpotifyToMP3</title>
 </head>
