@@ -65,7 +65,7 @@
 	  <td><strong>/link</strong></td>
 	  <td >
 		  <br /><br />
-	  		Con este comando GET devuelve un JSON con todos los links de descarga de la aplicación.
+	  		Con este comando GET devuelve un JSON con todos los enlaces de descarga de la aplicación.
 	  		
 			Si en algún momento estuviese vacía, el sistema devolverá un “404 NOT FOUND” y un mensaje de error.
 			<br /><br />
@@ -74,12 +74,12 @@
     </tr>
     <tr>
 		  <td><strong>GET</strong></td>
-		  <td><strong>/link/url</strong></td>
+		  <td><strong>/link/nombre</strong></td>
 		  <td>	
 		  		<br /><br />
-		  		Con este comando GET devuelve el link de descarga del video de Youtube con url = url elegida por el usuario.
+		  		Con este comando GET devuelve el enlace de descarga del video de Youtube con nombre = nombre elegido por el usuario.
 		  		
-				Si no disponemos de ningún link de descarga, el sistema devolverá un “404 NOT FOUND” y un mensaje de error.
+				Si no disponemos de ningún enlace de descarga, el sistema devolverá un “404 NOT FOUND” y un mensaje de error.
 				<br /><br />
 				
 				
@@ -90,7 +90,7 @@
 		  <td><strong>/link</strong></td>
 		  <td> 
 		  <br /><br />
-		        Con el comando POST se añadirá un link con los datos que se pasen en el cuerpo de la petición en formato JSON
+		        Con el comando POST se añadirá un enlace con los datos que se pasen en el cuerpo de la petición en formato JSON
 				
 				Si todo es correcto, lo añadiremos y el sistema devolverá un “201 CREATED”.
 				
@@ -105,20 +105,20 @@
 		  <td><strong>/link</strong></td>
 		  <td>
 		  		<br /><br />
-				Con el comando PUT se actualizará el link cuyos datos se pasan en el cuerpo de la petición en formato JSON.
-				Si el link que busca no se encuentra en nuestra aplicación, el sistema devolverá un "404 NOT FOUND".
+				Con el comando PUT se actualizará el enlace cuyos datos se pasan en el cuerpo de la petición en formato JSON.
+				Si el enlace que busca no se encuentra en nuestra aplicación, el sistema devolverá un "404 NOT FOUND".
 		  		<br /><br />
 		  		
 		  </td>
 		</tr>
 		<tr>
 		  <td><strong>DELETE</strong></td>
-		  <td><strong>/link/url</strong></td>
+		  <td><strong>/link/nombre</strong></td>
 		  <td>	
 		  		<br /><br />
-		  		Con el comando DELETE se eliminará el link del video de Youtube url = url elegida por el usuario.
+		  		Con el comando DELETE se eliminará el enlace del video de Youtube nombre = nombre elegido por el usuario.
 				
-		  		Si el link a eliminar no está en nuestra aplicación, el sistema devolverá un “400 BAD REQUEST”.
+		  		Si el enlace a eliminar no está en nuestra aplicación, el sistema devolverá un “404 NOT FOUND”.
 		  		<br /><br />
 		  </td>
 		</tr>
