@@ -21,6 +21,14 @@
     	<url-pattern>/SearchController</url-pattern>
   	</servlet-mapping>
  
+ 	<servlet>
+    	<servlet-name>IntoController</servlet-name>
+  		<servlet-class>aiss.controller.IntoController</servlet-class>
+ 	</servlet>
+  	<servlet-mapping>
+   	 	<servlet-name>IntoController</servlet-name>
+    	<url-pattern>/IntoController</url-pattern>
+  	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

@@ -4,21 +4,20 @@ package aiss.model.spotify;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Artist {
+public class AddedBy {
 
-    private ExternalUrls_ externalUrls;
+    private ExternalUrls externalUrls;
     private String href;
     private String id;
-    private String name;
     private String type;
     private String uri;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    public ExternalUrls_ getExternalUrls() {
+    public ExternalUrls getExternalUrls() {
         return externalUrls;
     }
 
-    public void setExternalUrls(ExternalUrls_ externalUrls) {
+    public void setExternalUrls(ExternalUrls externalUrls) {
         this.externalUrls = externalUrls;
     }
 
@@ -36,14 +35,6 @@ public class Artist {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getType() {

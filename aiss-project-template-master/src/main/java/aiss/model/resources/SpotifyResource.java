@@ -1,5 +1,6 @@
 package aiss.model.resources;
 
+import java.awt.List;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
@@ -15,6 +16,7 @@ import org.restlet.util.Series;
 
 import com.google.appengine.repackaged.com.google.gson.Gson;
 
+import aiss.model.spotify.IntoPlaylist;
 import aiss.model.spotify.TrackSearch;
 import aiss.model.spotify.UserPlaylist;
 
@@ -87,6 +89,33 @@ public class SpotifyResource {
          log.log(Level.FINE, "Búsqueda en Spotify realizada correctamente.");
         
          return sol;
-
+	}
+	
+	public IntoPlaylist getIntoPlaylist(String uri)throws UnsupportedEncodingException{
+		String json = null;
+		ClientResource cr = null;
+		try{
+			cr = new ClientResource(uri + "?access_token=" + access_Token);
+			json = cr.get(String.class);
+			log.log(Level.FINE,"Búsqueda realizada correctamente."+json);
+			Map<String, Object> reqAttribs = cr.getRequestAttributes(); 
+			Series<Header> headers = (Series<Header>)reqAttribs.get("org.restlet.http.headers"); 
+			if (headers == null) { 
+				headers = new Series<Header>(Header.class); 
+				reqAttribs.put("org.restlet.http.headers", headers); 
+			} 
+				headers.add(new Header("Authorization:", "Bearer "+access_Token));
+				ChallengeResponse chr = new ChallengeResponse(
+							ChallengeScheme.HTTP_OAUTH_BEARER);
+				chr.setRawValue(access_Token);
+				cr.setChallengeResponse(chr);
+				
+			}catch (ResourceException re){
+				System.err.println("Error cuando accedió a Spotify: " + cr.getResponse().getStatus());
+		}
+		 Gson gsonObj = new Gson();
+		 IntoPlaylist sol = gsonObj.fromJson(json, IntoPlaylist.class);
+         log.log(Level.FINE, "Acceso a la playlist correcto.");
+		return sol;
 	}
 }

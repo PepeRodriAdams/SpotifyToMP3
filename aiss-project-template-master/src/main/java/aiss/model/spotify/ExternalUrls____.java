@@ -4,7 +4,7 @@ package aiss.model.spotify;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ExternalUrls___ {
+public class ExternalUrls____ {
 
     private String spotify;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();

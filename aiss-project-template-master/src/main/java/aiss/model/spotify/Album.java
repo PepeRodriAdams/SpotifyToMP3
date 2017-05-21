@@ -1,20 +1,23 @@
 
 package aiss.model.spotify;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Album {
 
     private String albumType;
     private List<Artist> artists = null;
     private List<String> availableMarkets = null;
-    private ExternalUrls_ externalUrls;
+    private ExternalUrls__ externalUrls;
     private String href;
     private String id;
     private List<Image> images = null;
     private String name;
     private String type;
     private String uri;
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public String getAlbumType() {
         return albumType;
@@ -40,11 +43,11 @@ public class Album {
         this.availableMarkets = availableMarkets;
     }
 
-    public ExternalUrls_ getExternalUrls() {
+    public ExternalUrls__ getExternalUrls() {
         return externalUrls;
     }
 
-    public void setExternalUrls(ExternalUrls_ externalUrls) {
+    public void setExternalUrls(ExternalUrls__ externalUrls) {
         this.externalUrls = externalUrls;
     }
 
@@ -94,6 +97,14 @@ public class Album {
 
     public void setUri(String uri) {
         this.uri = uri;
+    }
+
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
     }
 
 }
