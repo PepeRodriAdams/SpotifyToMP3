@@ -22,17 +22,12 @@
     <h1>Spotify To Mp3</h1>
 	
     <p>¿Alguna vez has intentado descargar las canciones de tus playlists creadas en Spotify 1 a 1 y has muerto de aburrimiento extremo? 
-    Sabemos que puede ser algo muy tedioso y por eso hacemos este mashup.Con nuestro mashup puedes hacer log in con tu cuenta de Spotify 
+    Sabemos que puede ser algo muy tedioso y por eso hacemos este mashup. Con nuestro mashup puedes hacer log in con tu cuenta de Spotify 
     para acceder a tus listas guardadas y descargar las canciones con 1 solo botón</p>
     <table> 
 
+	<a href="${inMP3res}"/><img src='//www.youtubeinmp3.com/icon/download.png' style='vertical-align:middle;'> <strong>Download MP3</strong></a>
 
-<fieldset id="youtubeInMP3">
-<legend>YoutubeInMP3 link for  </legend>
-
-	<td><a href="${inMP3res}"/> }">Enlace de descarga</a></td>    
-
-</fieldset>
 
 <%@include file="includes/footer.jsp"%>
 

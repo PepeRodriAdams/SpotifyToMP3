@@ -36,7 +36,7 @@ public class SpotifyResource {
 		try{
 			cr = new ClientResource(userPlaylistsUri + "?access_token=" + access_Token);
 			json = cr.get(String.class);
-			log.log(Level.FINE,"Búsqueda de playlist del usuario realizada correctamente."+json);
+			log.log(Level.FINE,"Búsqueda de playlist del usuario realizada correctamente.");
 			Map<String, Object> reqAttribs = cr.getRequestAttributes(); 
 			Series<Header> headers = (Series<Header>)reqAttribs.get("org.restlet.http.headers"); 
 			if (headers == null) { 

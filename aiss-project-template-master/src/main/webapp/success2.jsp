@@ -39,7 +39,9 @@
 	<legend>Búsqueda de tracks para: <c:out value="${param.searchQuery}"/></legend>
 
 		<c:forEach items="${requestScope.tracks}" var="track">
-			<c:out value="${track.name}"/><br/>
+			<a href="/DescargaController?youtubeSearch=${track.name}"/>
+			<c:out value="${track.name}"/>
+			<c:out value=" - ${track.album.name}"/><br/>
 		</c:forEach>
 	</fieldset>
 	
