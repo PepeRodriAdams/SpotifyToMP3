@@ -5,7 +5,7 @@
         <span class="mdl-layout-title">
         </span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.jsp">Inicio</a>
+          <a class="mdl-navigation__link" href="LoginController">Inicio</a>
           <div id="buscar2"></div>
           <div class="android-drawer-separator"></div>
           <a class="mdl-navigation__link" href="api.html">Nuestra API REST</a>

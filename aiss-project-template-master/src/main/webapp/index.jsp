@@ -19,14 +19,7 @@
     <table>
     <tr></tr><br><br>
     	
-	<tr> <h2>Búsqueda en spotify</h2>
-    	<div id="searchDiv">
-			<form id="searchForm" action="SearchController" method="post">
-				<input type="text" name="searchQuery" required/> 
-				<input type="submit" name="searchBtn" title="busqueda" value="búsqueda">
-			</form>
-		</div>
-	</tr>    
+  
   	<tr><a href="LoginController">Login en Spotify</a></tr> 
 
  	</table>

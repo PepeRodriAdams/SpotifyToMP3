@@ -3,7 +3,7 @@
 
 
 <fieldset id="youtubeInMP3">
-<legend>YoutubeInMP3 link for Humble - Kendrik Lamar </legend>
+<legend>YoutubeInMP3 link for  </legend>
 
 	<td><a href="${inMP3res}"/> }">Enlace de descarga</a></td>    
 
